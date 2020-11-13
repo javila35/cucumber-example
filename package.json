@@ -1,0 +1,29 @@
+{
+  "name": "cucumber-test",
+  "version": "1.0.0",
+  "description": "testing playground for cucumber article",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javila35/cucumber-example.git"
+  },
+  "keywords": [
+    "BDD",
+    "testing",
+    "cucumber",
+    "selenium"
+  ],
+  "author": "Joe Avila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javila35/cucumber-example/issues"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^7.0.0-rc.0",
+    "chai": "^4.2.0",
+    "chromedriver": "^86.0.0",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  }
+}

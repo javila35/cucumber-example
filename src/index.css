@@ -1,0 +1,22 @@
+body {
+    background-color: lavenderblush;
+    text-align: center;
+}
+
+#textbox {
+    margin: 1em;
+    min-width: 30vw;
+    font-size: 1.5rem;
+}
+
+.selector {
+    margin: 1em;
+    font-size: 2rem;
+}
+
+button {
+    font-size: 2rem;
+    margin: 1em;
+    min-width: 5vw;
+    min-height: 3vh;
+}
