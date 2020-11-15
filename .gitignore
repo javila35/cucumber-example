@@ -1,2 +1,4 @@
 .vscode
 bdd/errorScreenshots/
+
+node_modules/
