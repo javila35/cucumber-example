@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "testing playground for cucumber article",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "./node_modules/.bin/cucumber-js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,6 @@
   "dependencies": {
     "@cucumber/cucumber": "^7.0.0-rc.0",
     "chai": "^4.2.0",
-    "chromedriver": "^86.0.0",
     "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }
