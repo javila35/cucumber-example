@@ -16,7 +16,6 @@ button.addEventListener("click", function() {
 /*
 
 Next steps:
-    - Set up driver environment
     - Write step defs
     - Implement step def fuctionality
     - Write article breaking it down

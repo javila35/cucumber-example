@@ -11,11 +11,11 @@ body {
 
 .selector {
     margin: 1em;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 button {
-    font-size: 2rem;
+    font-size: 1rem;
     margin: 1em;
     min-width: 5vw;
     min-height: 3vh;
