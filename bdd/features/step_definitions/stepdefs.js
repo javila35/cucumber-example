@@ -1,7 +1,12 @@
 const { Builder, Capabilities, By } = require('selenium-webdriver')
-const { After, AfterAll, Given, When, Then } = require('@cucumber/cucumber')
-const { text } = require('express')
-// require('chromedriver')
+const { After, AfterAll, Given, Then } = require('@cucumber/cucumber')
+const { expect } = require('chai')
+
+const colorMap = {
+    'Green': 'rgba(0, 128, 0, 1)',
+    'Red': 'rgba(255, 0, 0, 1)',
+    'Purple': 'rgba(128, 0, 128, 1)'
+}
 
 // driver setup
 const driver = new Builder().withCapabilities(Capabilities.chrome()).build()
@@ -14,12 +19,17 @@ Then('I should see the default title', async function () {
     await driver.findElement(By.xpath(`.//*[text()[contains(.,'Welcome to the site.')]]`))
 })
 
-Then('I should see the second header', async function () {
+Then('I should see the default second header', async function () {
     await driver.findElement(By.xpath(`.//*[text()[contains(.,"I'll be checking for unique text values.")]]`))
 })
 
-Then('I should see the third header', async function () {
+Then('I should see the default third header', async function () {
     await driver.findElement(By.xpath(`.//*[text()[contains(.,"And confirming that I can change things.")]]`))
+})
+
+Then('I should not see the default third header', async function () {
+    const changingHeader = await driver.findElement(By.id('changing-header')).getText()
+    expect(changingHeader).to.not.equal("And confirming that I can change things.")
 })
 
 Then('I should see the text input field', async function () {
@@ -46,8 +56,17 @@ Then('I want to select the color {string} from the drop down', async function (s
     await dropDown.click()
 })
 
-Then('I will click the button to change the text', async function () {
+Then('I should submit the changes', async function () {
     await driver.findElement(By.id('submit')).click()
+})
+
+Then('I should see the text {string}', async function (string) {
+    await driver.findElement(By.xpath(`.//*[text()[contains(.,'${string}')]]`))
+})
+
+Then('I should make sure the third header is {string}', async function (string) {
+    const color = await driver.findElement(By.id('changing-header')).getCssValue('color')
+    expect(color).to.equal(colorMap[string])
 })
 
 // Take a screenshot of the browser state on failure.

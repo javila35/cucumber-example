@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "testing playground for cucumber article",
   "scripts": {
+    "start": "node app.js",
     "test": "cucumber-js bdd/features/test.feature"
   },
   "repository": {
