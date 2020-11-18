@@ -6,7 +6,7 @@ Feature: Run tests
         Then I should see the default third header
         Then I should see the text input field
         Then I should see the dropdown menu for color
-        Then I should see the button to change text
+        Then I should see the button to modify text
 
     Scenario: I want to change the text in the header
         Given I am on the home page
@@ -25,4 +25,4 @@ Feature: Run tests
         Then I should make sure the third header is 'Red'
         Then I want to select the color 'Purple' from the drop down
         Then I should submit the changes
-        Then I should make sure the third header is 'Purple'
+        Then I should make sure the third header is 'Puple'

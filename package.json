@@ -4,7 +4,7 @@
   "description": "testing playground for cucumber article",
   "scripts": {
     "start": "node app.js",
-    "test": "cucumber-js bdd/features/test.feature"
+    "test": "cucumber-js bdd/features/*.feature"
   },
   "repository": {
     "type": "git",
