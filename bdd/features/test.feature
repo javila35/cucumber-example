@@ -1,5 +1,5 @@
 Feature: Run tests
-    Scenario: I want to read the default values of the index page file
+    Scenario: I want to check default values of the page
         Given I am on the home page
         Then I should see the default title
         And I should see the default second header
