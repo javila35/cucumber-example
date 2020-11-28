@@ -73,12 +73,12 @@ Then('I should make sure the third header is {string}', async function (string) 
 After(async function (scenario) {
     if (scenario.result.status !== 1) {
         driver.takeScreenshot()
-        .then(function (image, err) {
-            const fileName = `bdd/errorScreenshots/Error_${Date.now()}.png`
-            require('fs').writeFile(fileName, image, 'base64', function(err) {
-                console.log(err)
+            .then(function (image, err) {
+                const fileName = `bdd/errorScreenshots/Error_${Date.now()}.png`
+                require('fs').writeFile(fileName, image, 'base64', function (err) {
+                    console.log(err)
+                })
             })
-        })
     }
 })
 
