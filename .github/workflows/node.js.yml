@@ -16,10 +16,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: nanasess/setup-chromedriver@master
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+    - uses: browser-actions/setup-chrome@latest
+    - run: chrome --version
+    - uses: nanasess/setup-chromedriver@master
     - run: npm test
