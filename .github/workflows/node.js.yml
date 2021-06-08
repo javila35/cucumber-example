@@ -1,0 +1,17 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: Run WDIO tests
+    steps:
+    - name: Start selenoid
+      uses: Xotabu4/selenoid-github-action@v1
+    - uses: actions/checkout@v2
+    - run: npm ci  
+    - name: Run tests
+      run: npm test
